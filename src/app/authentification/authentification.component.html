@@ -1,0 +1,22 @@
+<div>
+    <h1>log in </h1>
+   <p> User name :<input type="text"  #userName/></p>
+   <p>password : <input type="password"  #password (blur)="verif(userName.value,password.value)"/></p>
+    
+    
+        <button *ngIf="erreur=='user'">
+            <a  [routerLink]="['/erreurauth']">connect</a>
+        </button>
+
+        <button *ngIf="erreur=='password'">
+                <a  [routerLink]="['/erreurmdp']">connect</a>
+            </button>
+
+
+
+            <button *ngIf="erreur=='correct'">
+                    <a   [routerLink]="['/acceuil']">connect</a>
+                </button>
+    
+
+</div>

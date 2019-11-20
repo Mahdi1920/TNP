@@ -1,8 +1,35 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthentificationComponent } from './authentification/authentification.component';
+import { ErreurauthComponent } from './erreurauth/erreurauth.component';
+import { ErreurComponent } from './erreur/erreur.component';
+import { ErreurmdpComponent } from './erreurmdp/erreurmdp.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { MenuComponent } from './menu/menu.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { ArticleComponent } from './article/article.component';
+import { SelectedArticleComponent } from './selected-article/selected-article.component';
+import { ModifArticleComponent } from './modif-article/modif-article.component';
+import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
 
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {path:'acceuil', component:AcceuilComponent},
+  {path:'authentification', component:AuthentificationComponent},
+  {path:'erreurauth', component:ErreurauthComponent},
+  {path:'erreurmdp', component:ErreurmdpComponent},
+  {path:'menu', component:MenuComponent},
+  {path:'ajout', component:AjoutArticleComponent},
+  {path:'modif', component:ModifArticleComponent },
+  {path:'select', component:SelectedArticleComponent},
+  {path:'article', component:ArticleComponent },
+  {path:'articles', component:ArticlesComponent },
+  {path:'', redirectTo:'authentification' , pathMatch:'full'},
+  {path:'**', component:ErreurComponent} 
+
+   
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
