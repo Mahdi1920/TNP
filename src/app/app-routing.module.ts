@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'menu', component:MenuComponent},
   {path:'ajout', component:AjoutArticleComponent},
   {path:'modif', component:ModifArticleComponent },
-  {path:'select', component:SelectedArticleComponent},
+  {path:'selectedArticle/:id', component:SelectedArticleComponent},
   {path:'article', component:ArticleComponent },
   {path:'articles', component:ArticlesComponent },
   {path:'', redirectTo:'authentification' , pathMatch:'full'},

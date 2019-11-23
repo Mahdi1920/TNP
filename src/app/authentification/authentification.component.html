@@ -1,22 +1,30 @@
-<div>
-    <h1>log in </h1>
-   <p> User name :<input type="text"  #userName/></p>
-   <p>password : <input type="password"  #password (blur)="verif(userName.value,password.value)"/></p>
-    
-    
+<body >
+<div class="container" >
+        <div class="row">
+          <div class="col-sm-19 col-md-17 col-lg-15 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h1 class="card-title text-center">Sign In</h1>
+                
+   <!--<h1>Log in </h1>--> 
+    <!--<p> User name :</p>-->
+    <input type="text" id="inputUser" class="form-control" placeholder="Username" required autofocus  #userName />
+    <!--<p> password : </p>-->
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #password (keyup)="verif(userName.value,password.value)" /><br/>
         <button *ngIf="erreur=='user'">
             <a  [routerLink]="['/erreurauth']">connect</a>
         </button>
 
         <button *ngIf="erreur=='password'">
-                <a  [routerLink]="['/erreurmdp']">connect</a>
-            </button>
+            <a  [routerLink]="['/erreurmdp']">connect</a>
+        </button>
 
-
-
-            <button *ngIf="erreur=='correct'">
-                    <a   [routerLink]="['/acceuil']">connect</a>
-                </button>
-    
-
+        <button *ngIf="erreur=='correct'">
+            <a   [routerLink]="['/acceuil']">connect</a>
+        </button>
 </div>
+</div>
+</div>
+</div>
+</div>
+</body>

@@ -1,1 +1,52 @@
-<p>selected-article works!</p>
+<app-menu></app-menu>
+
+<ul class="list-group">
+        
+
+
+    <li class="list-group-item">
+        <img [src]='c.image' width='300px' height='200px'/>
+    </li>
+
+
+    <li class="list-group-item">
+        article's ID : {{c.id}}
+    </li>
+
+    <li class="list-group-item">
+        car's model : {{c.libelle}}
+    </li>
+
+    
+    
+    <li class="list-group-item">
+        <p>
+                car's price : 
+                <button (click)="convtnd(c.prix)">(TND) </button> 
+                <input type="text" [value]='tnd1'>
+                
+                
+                <button (click)="conveur(c.prix)" >(EUR) </button> 
+                <input type="text" [value]='eur1' >
+                
+                
+                <button (click)="convusd(c.prix)">(USD) </button> 
+                <input type="text" [value]='usd1'> 
+        </p>
+    </li>
+    
+    <li class="list-group-item">
+        <p>
+            condition :<br>
+            used :  <input type="checkbox" [checked]="!c.etat"/>
+            new :  <input type="checkbox" [checked]="c.etat"/>
+            
+        </p>
+    </li>
+
+    <li>
+            date of release : {{c.date |date}}
+    </li>
+
+
+</ul>
