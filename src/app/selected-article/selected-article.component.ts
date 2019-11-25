@@ -30,7 +30,7 @@ export class SelectedArticleComponent implements OnInit {
     }
 
     conveur  (prix:number){
-       let eur=this.c.prix*0.91;
+       let eur=(this.c.prix*0.91).toFixed(2);
        this.eur1=eur.toString()
        this.tnd1="";
        this.usd1="";
@@ -49,7 +49,7 @@ export class SelectedArticleComponent implements OnInit {
     }
 
     convtnd  (prix:number){
-      let tnd=(this.c.prix*2.85).toFixed(2);
+      let tnd=(this.c.prix*2.85).toFixed(3);
       this.tnd1=tnd.toString()
       this.eur1="";
       this.usd1="";
