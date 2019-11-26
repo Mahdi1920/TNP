@@ -1,6 +1,6 @@
 export class Article
 {
-    constructor(private _id:number , private _libelle:string , private _image:string , private _prix:number , private _etat:boolean , private _date:Date )
+    constructor(private _id:number , private _libelle:string , private _image:string , private _prix:number , private _couleur:string, private _vitesse:number, private _etat:boolean , private _date:Date )
     {}
 
     public get id(): number 
@@ -23,6 +23,16 @@ export class Article
     public set prix(pr:number)
         { this.prix=pr; }
 
+    public get couleur(): string 
+        { return this._couleur; } 
+    public set couleur(coul:string)
+        { this._libelle =coul; }
+
+    public get vitesse(): number 
+        { return this._vitesse; } 
+    public set vitesse(vit:number)
+        { this.prix=vit; }
+    
     public get etat(): boolean
         { return this._etat; } 
     public set etat( b:boolean)
@@ -30,7 +40,6 @@ export class Article
 
     public get date():Date
         {return this._date ;}
-
     public set date (dt :Date)
         {this._date=dt ;}
 }

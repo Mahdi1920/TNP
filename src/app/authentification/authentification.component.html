@@ -11,16 +11,16 @@
     <input type="text" id="inputUser" class="form-control" placeholder="Username" required autofocus  #userName />
     <!--<p> password : </p>-->
     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #password (keyup)="verif(userName.value,password.value)" /><br/>
-        <button *ngIf="erreur=='user'">
+        <button *ngIf="erreur=='user'" class="btn btn-danger">
             <a  [routerLink]="['/erreurauth']">connect</a>
         </button>
 
         <button *ngIf="erreur=='password'">
-            <a  [routerLink]="['/erreurmdp']">connect</a>
+            <a  [routerLink]="['/erreurmdp']" class="btn btn-danger">connect</a>
         </button>
 
         <button *ngIf="erreur=='correct'">
-            <a   [routerLink]="['/acceuil']">connect</a>
+            <a   [routerLink]="['/acceuil']" class="btn btn-success">connect</a>
         </button>
 </div>
 </div>

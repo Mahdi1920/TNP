@@ -7,10 +7,23 @@
     Prix: <input type="number" placeholder="Price" class="form-control"/>
     Date de fabrication:<input type="date" class="form-control"/>
     Etat: <input type="text" placeholder="Condition" class="form-control"/>
-    <input type="submit"  value="Envoyer"/>	
-    <input type="reset" value="annuler"/>   
+    Couleur: <input type="text" placeholder="Couleur" class="form-control"/>
+    Vitesse: <input type="number" placeholder="Vitesse" class="form-control"/>
+    <input type="submit"  value="Envoyer"class="btn btn-success" [routerLink]="['/articles']"/>	
+    <input type="reset" value="annuler"  class="btn btn-danger"/>
 </form>
 
-   
+<!--  <form (ngSubmit)="onSubmit(f)"  #f="ngForm" class="form-group text-white">         
+    ID of car:<input type="number" cols placeholder="Id" [(ngModel)]="id" class="form-control"/>
+    Model:<input type="text" placeholder="Model" [(ngModel)]="lib" class="form-control"/>
+    Image URL:<input type="text" placeholder="Scr" [(ngModel)]="src" class="form-control"/> 
+    Prix: <input type="number" placeholder="Price" [(ngModel)]="prix" class="form-control"/>
+    Date de fabrication:<input type="date" [(ngModel)]="date"  class="form-control"/>
+    Etat: <input type="text" placeholder="Condition" [(ngModel)]="etat" class="form-control"/>
+    Couleur: <input type="text" placeholder="Couleur" [(ngModel)]="couleur" class="form-control"/>
+    Vitesse: <input type="number" placeholder="Vitesse" [(ngModel)]="vitesse" class="form-control"/>
+    <input type="submit"  value="Envoyer"class="btn btn-success" [routerLink]="['/articles']"/>	
+    <input type="reset" value="annuler"  class="btn btn-danger"/>
+</form>-->
 
 

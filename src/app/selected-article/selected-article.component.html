@@ -29,6 +29,15 @@
     </li>
     
     <li class="list-group-item">
+        car's color : {{c.couleur}}
+    </li>
+
+    <li class="list-group-item">
+        car's vitesse : {{c.vitesse}}
+        <button>Km/h</button>
+    </li>
+
+    <li class="list-group-item">
         <p>
             condition :<br>
             used :  <input type="checkbox" [disabled]="c.etat" [checked]="!c.etat"/>
