@@ -1,9 +1,8 @@
-<app-menu></app-menu>
-<h2 class="text-white" style="text-align: center;">Modify car:</h2>
+<h2 class="text-white" style="text-align: center;">Add Car:</h2>
 <form  class="form-group text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
     ID of car:<input type="number" cols placeholder="Id"  name="id" class="form-control" [(ngModel)]="id"/>
-    
-    Model:<input type="text" name="lib" placeholder="Model" class="form-control"[(ngModel)]="lib" />
+
+    Model:<input type="text" name="lib" placeholder="Model" class="form-control"[(ngModel)]="lib"    />
     
     Photo URL:<input type="text" name="image" placeholder="Src" class="form-control" [(ngModel)]="image"/>
     
@@ -23,5 +22,4 @@
     
     <input type="reset" value="annuler"  class="btn btn-danger"/>
 </form>
-
 

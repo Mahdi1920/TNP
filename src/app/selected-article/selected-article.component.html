@@ -14,8 +14,34 @@
         car's model : {{c.libelle}}
     </li>
 
+    <li class="list-group-item ">
+            Horse power : {{c.hp}} (hp)
+        </li>
+
+    
+    
+        <li class="list-group-item">
+                car's color : {{c.couleur}}
+            </li>
+        
+            <li class="list-group-item">
+                car's vitesse : {{c.vitesse}} (km/h)
+            </li>
+        
+            <li class="list-group-item">
+                <p>
+                    condition :<br>
+                    used :  <input type="checkbox" [disabled]="c.etat" [checked]="!c.etat"/>
+                    new :  <input type="checkbox" [disabled]="!c.etat" [checked]="c.etat"/>
+                </p>
+            </li>
+        
+            <li class="list-group-item">
+                    date of release : {{c.date |date}}
+            </li>
     <li class="list-group-item">
         <p>
+            
             car's price : 
             <button (click)="convtnd(c.prix)">TND </button> 
             <input type="text" [value]='tnd1'>
@@ -27,27 +53,13 @@
             <input type="text" [value]='usd1'> 
         </p>
     </li>
+        </ul>
     
-    <li class="list-group-item">
-        car's color : {{c.couleur}}
-    </li>
-
-    <li class="list-group-item">
-        car's vitesse : {{c.vitesse}}
-        <button>Km/h</button>
-    </li>
-
-    <li class="list-group-item">
-        <p>
-            condition :<br>
-            used :  <input type="checkbox" [disabled]="c.etat" [checked]="!c.etat"/>
-            new :  <input type="checkbox" [disabled]="!c.etat" [checked]="c.etat"/>
-        </p>
-    </li>
-
-    <li class="list-group-item">
-            date of release : {{c.date |date}}
-    </li>
-</ul>
+    
+    
+    
+    
+    
+    
 <button  class="btn btn-primary" [routerLink]="['/articles']">Articles</button> 
 </body>

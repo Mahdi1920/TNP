@@ -15,6 +15,7 @@ import { ArticleComponent } from './article/article.component';
 import { SelectedArticleComponent } from './selected-article/selected-article.component';
 import { ModifArticleComponent } from './modif-article/modif-article.component';
 import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
+import { SupprimerArticleComponent } from './supprimer-article/supprimer-article.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
     ArticleComponent,
     SelectedArticleComponent,
     ModifArticleComponent,
-    AjoutArticleComponent
+    AjoutArticleComponent,
+    SupprimerArticleComponent
   ],
   imports: [
     BrowserModule,

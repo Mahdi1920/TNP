@@ -11,6 +11,7 @@ import { ArticleComponent } from './article/article.component';
 import { SelectedArticleComponent } from './selected-article/selected-article.component';
 import { ModifArticleComponent } from './modif-article/modif-article.component';
 import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
+import { SupprimerArticleComponent } from './supprimer-article/supprimer-article.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'selectedArticle/:id', component:SelectedArticleComponent},
   {path:'article', component:ArticleComponent },
   {path:'articles', component:ArticlesComponent },
+  {path:'supprimerArticle', component:SupprimerArticleComponent },
   {path:'', redirectTo:'authentification' , pathMatch:'full'},
   {path:'**', component:ErreurComponent} 
 

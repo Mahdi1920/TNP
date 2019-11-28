@@ -1,6 +1,6 @@
 
 <nav class=" navbar navbar-expand-sm bg-dark justify-content-center sticky-top">
-    
+    <!--<h3  style="color: aqua; ">{{date |date:'medium'}}</h3>-->
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/acceuil']">home</a>
@@ -15,9 +15,12 @@
           <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/modif']" >modify car</a>
          </li>
-         <li><a class="nav-link" [routerLink]="['/authentification']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+         <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/supprimerArticle']" >delete car</a>
+         </li>
+         <li><a class="nav-link" [routerLink]="['/authentification']"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
         </ul>
-        <input  type="text" placeholder="Search">
-        <button class="btn btn-success" type="submit">Search</button>
+      <input  type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
       </nav>
       

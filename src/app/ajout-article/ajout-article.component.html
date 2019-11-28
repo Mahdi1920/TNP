@@ -1,29 +1,54 @@
 <app-menu></app-menu>
 <h2 class="text-white" style="text-align: center;">Add Car:</h2>
-<form  class="form-group text-white">         
-    ID of car:<input type="number" cols placeholder="Id"  class="form-control"/>
-    Model:<input type="text" placeholder="Model" class="form-control"/>
-    Image URL:<input type="text" placeholder="Scr" class="form-control"/> 
-    Prix: <input type="number" placeholder="Price" class="form-control"/>
-    Date de fabrication:<input type="date" class="form-control"/>
-    Etat: <input type="text" placeholder="Condition" class="form-control"/>
-    Couleur: <input type="text" placeholder="Couleur" class="form-control"/>
-    Vitesse: <input type="number" placeholder="Vitesse" class="form-control"/>
-    <input type="submit"  value="Envoyer"class="btn btn-success" [routerLink]="['/articles']"/>	
-    <input type="reset" value="annuler"  class="btn btn-danger"/>
-</form>
+<!--<form  class="form-group text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
+    ID of car:<input type="number" cols placeholder="Id"  name="id" class="form-control" [(ngModel)]="id"/>
 
-<!--  <form (ngSubmit)="onSubmit(f)"  #f="ngForm" class="form-group text-white">         
-    ID of car:<input type="number" cols placeholder="Id" [(ngModel)]="id" class="form-control"/>
-    Model:<input type="text" placeholder="Model" [(ngModel)]="lib" class="form-control"/>
-    Image URL:<input type="text" placeholder="Scr" [(ngModel)]="src" class="form-control"/> 
-    Prix: <input type="number" placeholder="Price" [(ngModel)]="prix" class="form-control"/>
-    Date de fabrication:<input type="date" [(ngModel)]="date"  class="form-control"/>
-    Etat: <input type="text" placeholder="Condition" [(ngModel)]="etat" class="form-control"/>
-    Couleur: <input type="text" placeholder="Couleur" [(ngModel)]="couleur" class="form-control"/>
-    Vitesse: <input type="number" placeholder="Vitesse" [(ngModel)]="vitesse" class="form-control"/>
-    <input type="submit"  value="Envoyer"class="btn btn-success" [routerLink]="['/articles']"/>	
+    Model:<input type="text" name="lib" placeholder="Model" class="form-control"[(ngModel)]="lib"    />
+    
+    Photo URL:<input type="text" name="image" placeholder="Src" class="form-control" [(ngModel)]="image"/>
+    
+    Horse power:<input type="number" cols placeholder="horse power"  name="hp" class="form-control" [(ngModel)]="hp"/>
+    
+    Price: <input type="number" name="prix" placeholder="Price" class="form-control" [(ngModel)]="prix"/>
+    
+    Date of release:<input type="date" name="date" class="form-control" [(ngModel)]="date"/>
+    
+    Condition: <input type="text" name="etat" placeholder="Condition" class="form-control" [(ngModel)]="etat"/>
+    
+    Color: <input type="text" name="couleur" placeholder="Color" class="form-control" [(ngModel)]="couleur"/>
+    
+    Top speed: <input type="number" name="vitesse" placeholder="Top speed" class="form-control" [(ngModel)]="vitesse"/><br/>
+    
+    <input type="submit"  value="Envoyer"class="btn btn-success" />	
+    
     <input type="reset" value="annuler"  class="btn btn-danger"/>
 </form>-->
 
+<form  class="form-group text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
+        ID of car:<input type="text" cols placeholder="Id" id="id"  name="id" class="form-control" required [(ngModel)]="id" #identif="ngModel"/>
+        <div *ngIf="identif.invalid && identif.dirty" class="alert alert-danger">     L'identifiant doit être un nombre    </div> 
 
+        Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control" required  pattern="[A-Z][a-zA-Z]+" [(ngModel)]="libelle" #lib="ngModel"/>
+        <div *ngIf="lib.errors?.pattern && lib.dirty" class="alert alert-danger">  le model doit commencer par une majuscle suivie d'au moins 1 caractère      </div> 
+        <div [hidden]="!lib.errors?.required || lib.pristine"  class="alert alert-danger">             Le libellé est un champ obligatoire    </div> 
+ 
+        Photo URL:<input type="text" name="image" id="image" placeholder="Src" class="form-control" required [(ngModel)]="image" #img="ngModel"/>
+        
+        Horse power:<input type="number" cols placeholder="horse power"  id="hp" name="hp" class="form-control" required [(ngModel)]="hp" #hpp="ngModel" />
+        
+        Price: <input type="number" name="prix" placeholder="Price" id="prix" class="form-control" required [(ngModel)]="prix" #priix="ngModel" />
+        
+        Date of release:<input type="date" name="date" id="date" class="form-control" required [(ngModel)]="date" #dt="ngModel" />
+        
+        Condition: <input type="text" name="etat" id="etat" placeholder="Condition" class="form-control" required [(ngModel)]="etat" #eta="ngModel" />
+        
+        Color: <input type="text" name="couleur" etat="couleur" placeholder="Color" class="form-control" required  pattern="[A-Z][a-zA-Z]+" [(ngModel)]="couleur" #coul="ngModel" />
+        
+        Top speed: <input type="number" name="vitesse" id="vitesse" placeholder="Top speed" class="form-control" required [(ngModel)]="vitesse" #vit="ngModel" /><br/>
+        
+        <button class="btn btn-success" >Envoyer</button>  	
+        
+        <input type="reset" value="annuler"  class="btn btn-danger"/>
+        
+    </form>
+    
