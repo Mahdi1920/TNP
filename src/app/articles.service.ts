@@ -24,7 +24,6 @@ export class ArticlesService {
   }
 
   testId(id:number):boolean
-  
   {
     let test:boolean=false;
     for(let i=0;i<this.articles.length;i++)
@@ -33,14 +32,9 @@ export class ArticlesService {
       {
         test=true;
       }
-            
     }
     return test;
-      
-        
   }
-
-
 
 
   addCar (id:number, model:string, image:string,  prix:number,color:string,vitesse:number,etat:boolean, date:Date, hp:number,):boolean
