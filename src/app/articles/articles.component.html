@@ -1,12 +1,12 @@
 <app-menu></app-menu>
-<body class="text-white" >
-    <h2  style="text-align: center;">our cars</h2>
+<body  >
+    <h2  class="text-white" style="text-align: center;">our cars</h2>
 
 
-    <ul class="list-group">
+    <ul class="list-group " style="text-align: center; color:white;">
         <ng-container *ngFor="let c of lesArticles">
-            <li class="list-group-item">
-                <img [src]='c.image' width='300px' height='200px'/><br/>
+            <li class="list-group-item"  >
+                <img [src]='c.image' width='500px' height='200px'/><br/>
                 article's ID : {{c.id}}<br/>
                 car's model : {{c.libelle}}<br/>
                 car's price (USD) : {{c.prix}} <br/>

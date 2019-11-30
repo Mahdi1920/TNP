@@ -4,10 +4,10 @@ import { AuthentificationComponent } from './authentification/authentification.c
 import { ErreurauthComponent } from './erreurauth/erreurauth.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { ErreurmdpComponent } from './erreurmdp/erreurmdp.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
+
 import { MenuComponent } from './menu/menu.component';
 import { ArticlesComponent } from './articles/articles.component';
-import { ArticleComponent } from './article/article.component';
+import { RechercheComponent } from './recherche/recherche.component';
 import { SelectedArticleComponent } from './selected-article/selected-article.component';
 import { ModifArticleComponent } from './modif-article/modif-article.component';
 import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
@@ -16,7 +16,7 @@ import { SupprimerArticleComponent } from './supprimer-article/supprimer-article
 
 
 const routes: Routes = [
-  {path:'acceuil', component:AcceuilComponent},
+ 
   {path:'authentification', component:AuthentificationComponent},
   {path:'erreurauth', component:ErreurauthComponent},
   {path:'erreurmdp', component:ErreurmdpComponent},
@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'ajout', component:AjoutArticleComponent},
   {path:'modif', component:ModifArticleComponent },
   {path:'selectedArticle/:id', component:SelectedArticleComponent},
-  {path:'article', component:ArticleComponent },
+  {path:'recherche', component: RechercheComponent},
   {path:'articles', component:ArticlesComponent },
   {path:'supprimerArticle', component:SupprimerArticleComponent },
   {path:'', redirectTo:'authentification' , pathMatch:'full'},

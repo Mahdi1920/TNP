@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<form  class="form-group  text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
+        ID of car:<input type="text" cols placeholder="Id"   name="id" class="form-control"   [(ngModel)]="id" />
+        
+    
+        Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control"   [(ngModel)]="libelle" />
+        
+        Min Price: <input type="text" name="prixmin" placeholder="Price"  class="form-control"    [(ngModel)]="prixmin"  />
+        
+        
+        Max Price: <input type="text" name="prixmax" placeholder="Price"  class="form-control"    [(ngModel)]="prixmax"  />
+        
+
+       
+       condition :<br/>
+       is it new ? :<input type="text" name="etat"  placeholder="Condition" class="form-control"   [(ngModel)]="etat"  />
+                   
+            <br/><br/>
+        <button class="btn btn-success"   >Envoyer</button>  	
+        <input type="reset" value="annuler"  class="btn btn-danger"/>
+</form>
+
+
+        <!--<ng-container *ngFor="let c of articles">
+                <li class="list-group-item"  >
+                    <img [src]='c.image' width='500px' height='200px'/><br/>
+                    article's ID : {{c.id}}<br/>
+                    car's model : {{c.libelle}}<br/>
+                    car's price (USD) : {{c.prix}} <br/>
+                    <button  class="btn btn-primary" [routerLink]="['/selectedArticle',c.id]"> Infos</button> 
+                </li>
+            </ng-container>-->
+
+
+           <!--article's ID : {{c.id}}<br/>
+            car's model : {{c.libelle}}<br/>
+            car's price (USD) : {{c.prix}} <br/>
+            --> 
+            
+            
+    

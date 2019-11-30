@@ -3,18 +3,19 @@ import { Article } from '../Article';
 import { ArticlesService} from '../articles.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-selected-article',
   templateUrl: './selected-article.component.html',
   styleUrls: ['./selected-article.component.css']
 })
 export class SelectedArticleComponent implements OnInit {
-
   id:number;
   c: Article;
   eur1:string="";
   usd1:string="";
   tnd1:string="";
+  
   
  
     constructor(private activatedRouter:ActivatedRoute,private articlesService:ArticlesService,private router:Router) { }
@@ -22,7 +23,7 @@ export class SelectedArticleComponent implements OnInit {
 
     
 
-
+    
     ngOnInit() {
       let id= Number(this.activatedRouter.snapshot.params['id']);
       this.c = this.articlesService.getArticleById(id);

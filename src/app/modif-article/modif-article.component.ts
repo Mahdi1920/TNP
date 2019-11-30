@@ -20,12 +20,12 @@ couleur:string;
 hp:number;
 
   constructor(private articlesService:ArticlesService) { }
-  onSubmit(f:NgForm)
+  /*onSubmit(f:NgForm)
   {
     this.articlesService.modifCar(this.id, this.lib, this.src,  this.prix,this.couleur,this.vitesse,
        this.etat, this.date, this.hp);      
   }
- 
+ */
 
   ngOnInit() {
   }

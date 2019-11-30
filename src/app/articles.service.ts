@@ -12,6 +12,9 @@ export class ArticlesService {
     new Article(13, '206', '../assets/206.jpg',3000,"grey", 190, false,new Date(2003,10/7),35),     
     new Article(14,'4l','../assets/4l.jpg', 2000,"white", 127,false,new Date(1969,10,7),20)
   ];
+
+    
+    articlesR:Article[];
   constructor() { }
 
 
@@ -20,6 +23,8 @@ export class ArticlesService {
     for(let a of this.articles)
       if(a.id===m)
         return a ;
+        else 
+        return null;
         
   }
 
@@ -37,12 +42,12 @@ export class ArticlesService {
   }
 
 
-  addCar (id:number, model:string, image:string,  prix:number,color:string,vitesse:number,etat:boolean, date:Date, hp:number,):boolean
+ addCar (id:number, model:string, image:string,  prix:number,color:string,vitesse:number,etat:boolean, date:Date, hp:number,):boolean
   {
     if(this.testId(id)==false)
     {
       this.articles.push(new Article(id, model, image,  prix,color,vitesse,etat, date, hp));
-      alert("your car is successfully added")
+      alert("your car is successfully added");
       return true;
     }
     else
@@ -51,10 +56,11 @@ export class ArticlesService {
         return false;
       }
     }
-    
+   
+  
     
 
-    supprimerCar (id:number,):boolean
+  supprimerCar (id:number,):boolean
   {
     if(this.testId(id)==false)
     {
@@ -76,18 +82,11 @@ export class ArticlesService {
       return true;
     }
 
-      /*this.articles.push(new Article(id, model, image,  prix,color,vitesse,etat, date, hp));
-      alert("your car is successfully added")
-      return true;
-    }
-    else
-      {
-        alert("Id is already used");
-        return false;
-      }*/
-    }
-    
-    
+      
+  }
+   
+  
+
     modifCar (id:number, model:string, image:string,  prix:number,color:string,
       vitesse:number,etat:boolean, date:Date, hp:number,):boolean
       {
@@ -164,9 +163,6 @@ export class ArticlesService {
             test=true;
           }
 
-
-          
-          
         }
         if(test==false)
           {
@@ -179,6 +175,43 @@ export class ArticlesService {
           }
           return test;
       }
+
+
+
+
+
+
+
+
+      recherche(id/*, libelle,prixMin,prixMax,etat*/):Article
+      {
+          if(id!=null)
+          {
+            if(this.testId(id)==true)
+            {
+              //this.articlesR.push(this.getArticleById(id));           
+              return this.getArticleById(id);
+            }
+          
+            else if(this.testId(id)==false)
+            {
+              alert("car not found");
+            }
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
