@@ -3,53 +3,52 @@
     <h1  > Car's Informations</h1>
 <ul class="list-group" >
     <li class="list-group-item">
-        <img [src]='c.image' width='500px' height='200px'/>
+        <img [src]='image' width='500px' height='200px'/>
     </li>
 
     <li class="list-group-item ">
-        article's ID : {{c.id}}
+        article's ID : {{id}}
     </li>
 
     <li class="list-group-item">
-        car's model : {{c.libelle}}
+        car's model : {{libelle}}
     </li>
 
     <li class="list-group-item ">
-            Horse power : {{c.hp}} (hp)
+            Horse power : {{hp}} (hp)
         </li>
 
     
     
         <li class="list-group-item">
-                car's color : {{c.couleur}}
+                car's color : {{couleur}}
             </li>
         
             <li class="list-group-item">
-                car's vitesse : {{c.vitesse}} (km/h)
+                car's vitesse : {{vitesse}} (km/h)
             </li>
         
             <li class="list-group-item">
                 <p>
                     condition :<br>
-                    used :  <input type="checkbox" [disabled]="c.etat" [checked]="!c.etat"/>
-                    new :  <input type="checkbox" [disabled]="!c.etat" [checked]="c.etat"/>
+                    used :  <input type="checkbox" [disabled]="etat" [checked]="!etat"/>
+                    new :  <input type="checkbox" [disabled]="!etat" [checked]="etat"/>
                 </p>
             </li>
         
             <li class="list-group-item">
-                    date of release : {{c.date |date}}
+                    date of release : {{date |date}}
             </li>
     <li class="list-group-item">
         <p>
-            
             car's price : 
-            <button (click)="convtnd(c.prix)">TND </button> 
+            <button (click)="convtnd(prix)">TND </button> 
             <input type="text" [value]='tnd1'>
                 
-            <button (click)="conveur(c.prix)" >EUR </button> 
+            <button (click)="conveur(prix)" >EUR </button> 
             <input type="text" [value]='eur1' >
                 
-            <button (click)="convusd(c.prix)">USD </button> 
+            <button (click)="convusd(prix)">USD </button> 
             <input type="text" [value]='usd1'> 
         </p>
     </li>
@@ -60,3 +59,6 @@
 
 <button  class="btn btn-primary" [routerLink]="['/articles']">Articles</button> 
 </body>
+
+
+{{id}}

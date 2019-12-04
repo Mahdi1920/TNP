@@ -1,19 +1,11 @@
-/*body {
-    background-image:url('../assets/bg.jpg');
-  }
-
-  ul {
-    background-color:#696969;
-  }
-
-body {
-    background-color: darkgray;
-  }*/
   li,body {
-    background: url('../assets/bg.jpg') no-repeat center center fixed;
+    background:url('../assets/lb.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    color:black ;
+    font-weight:bolder ;
   }
+  
   

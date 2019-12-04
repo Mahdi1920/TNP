@@ -15,19 +15,31 @@ export class SelectedArticleComponent implements OnInit {
   eur1:string="";
   usd1:string="";
   tnd1:string="";
-  
+
+  libelle:string;
+image:string;
+prix:number;
+date:Date;
+etat:boolean;
+vitesse:number;
+couleur:string;
+hp:number;
+
   
  
-    constructor(private activatedRouter:ActivatedRoute,private articlesService:ArticlesService,private router:Router) { }
-  
-
-    
-
+    constructor(private activatedRouter:ActivatedRoute,private articlesService:ArticlesService) { }
     
     ngOnInit() {
-      let id= Number(this.activatedRouter.snapshot.params['id']);
-      this.c = this.articlesService.getArticleById(id);
-      
+      this.id= this.activatedRouter.snapshot.params['id'];
+      this.c = this.articlesService.getArticleById(this.id);
+      this.libelle=this.c.libelle;
+      this.image=this.c.image;
+      this.prix=this.c.prix;
+      this.date=this.c.date;
+      this.etat=this.c.etat;
+      this.vitesse=this.c.vitesse;
+      this.couleur=this.c.couleur;
+      this.hp=this.c.hp;
     }
 
     conveur  (prix:number){
@@ -35,11 +47,7 @@ export class SelectedArticleComponent implements OnInit {
        this.eur1=eur.toString()
        this.tnd1="";
        this.usd1="";
-      
-      
     }
-
-
 
     convusd  (prix:number){
        let usd=(this.c.prix).toFixed(2);
@@ -55,8 +63,5 @@ export class SelectedArticleComponent implements OnInit {
       this.eur1="";
       this.usd1="";
    }    
-
-      
-    
 
   }

@@ -12,20 +12,19 @@ import { Article } from '../Article';
 export class RechercheComponent implements OnInit {
 
   id:number;
-  libelle:string;
-  prixMin:number;
-  prixMax:number;
-  etat:boolean;
-  articles:Article[];
-  c:Article;
-  
+  a:Article;
+  x:boolean=false;
   constructor(private articlesService:ArticlesService) { }
 
   onSubmit(f:NgForm)
   {
     
-    this.c=this.articlesService.recherche(this.id);//, this.libelle,this.prixMin,this.prixMax,this.etat); 
-    console.log(this.c.id);
+    this.a=this.articlesService.recherche(this.id); 
+    if(this.a!=null)
+    {
+      this.x=true;
+    }
+    
     
     
     

@@ -3,14 +3,14 @@
     <h2  class="text-white" style="text-align: center;">our cars</h2>
 
 
-    <ul class="list-group " style="text-align: center; color:white;">
+    <ul class="list-group " style=" color:white;">
         <ng-container *ngFor="let c of lesArticles">
             <li class="list-group-item"  >
-                <img [src]='c.image' width='500px' height='200px'/><br/>
+                <img [src]='c.image' width='500px' height='300px'/><br/>
                 article's ID : {{c.id}}<br/>
                 car's model : {{c.libelle}}<br/>
                 car's price (USD) : {{c.prix}} <br/>
-                <button  class="btn btn-primary" [routerLink]="['/selectedArticle',c.id]"> Infos</button> 
+                <button  class="btn btn-primary" [routerLink]="['/selectedArticle',c.id]">Details</button> 
             </li>
         </ng-container>
         
