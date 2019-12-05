@@ -10,15 +10,15 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #password (keyup)="verif(userName.value,password.value)" /><br/>
 
             <button *ngIf="erreur=='user'" class="btn btn-success">
-              <a  [routerLink]="['/erreurauth']">connect</a>
+              <a  [routerLink]="['/erreurauth']" class="text-white">connect</a>
             </button>
 
-            <button *ngIf="erreur=='password'">
-              <a  [routerLink]="['/erreurmdp']" class="btn btn-success">connect</a>
+            <button *ngIf="erreur=='password'" class="btn btn-success">
+              <a  [routerLink]="['/erreurmdp']" class="text-white">connect</a>
             </button>
 
-            <button *ngIf="erreur=='correct'">
-              <a   [routerLink]="['/articles']" class="btn btn-success">connect</a>
+            <button *ngIf="erreur=='correct'" class="btn btn-success">
+              <a   [routerLink]="['/articles']" class="text-white" >connect</a>
             </button>
           </div>
         </div>

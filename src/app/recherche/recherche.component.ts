@@ -24,14 +24,6 @@ export class RechercheComponent implements OnInit {
     {
       this.x=true;
     }
-    
-    
-    
-    
-    
-    
-       
-      
   }
 
   ngOnInit() {
