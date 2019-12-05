@@ -1,63 +1,58 @@
 <app-menu></app-menu>
 <body class="text-white " style="text-align: center;">
     <h1  > Car's Informations</h1>
-<ul class="list-group" >
-    <li class="list-group-item">
-        <img [src]='image' width='500px' height='200px'/>
-    </li>
+    <ul class="list-group" >
+        <li class="list-group-item">
+            <img [src]='image' width='500px' height='200px'/>
+        </li>
 
-    <li class="list-group-item ">
-        article's ID : {{id}}
-    </li>
+        <li class="list-group-item ">
+            article's ID : {{id}}
+        </li>
 
-    <li class="list-group-item">
-        car's model : {{libelle}}
-    </li>
+        <li class="list-group-item">
+            car's model : {{libelle}}
+        </li>
 
-    <li class="list-group-item ">
+        <li class="list-group-item ">
             Horse power : {{hp}} (hp)
         </li>
 
-    
-    
         <li class="list-group-item">
-                car's color : {{couleur}}
-            </li>
+            car's color : {{couleur}}
+        </li>
         
-            <li class="list-group-item">
-                car's vitesse : {{vitesse}} (km/h)
-            </li>
+        <li class="list-group-item">
+            car's vitesse : {{vitesse}} (km/h)
+        </li>
         
-            <li class="list-group-item">
-                <p>
-                    condition :<br>
-                    used :  <input type="checkbox" [disabled]="etat" [checked]="!etat"/>
-                    new :  <input type="checkbox" [disabled]="!etat" [checked]="etat"/>
-                </p>
-            </li>
+        <li class="list-group-item">
+            <p>
+                condition :<br>
+                used :  <input type="checkbox" [disabled]="etat" [checked]="!etat"/>
+                new :  <input type="checkbox" [disabled]="!etat" [checked]="etat"/>
+            </p>
+        </li>
         
-            <li class="list-group-item">
-                    date of release : {{date |date}}
-            </li>
-    <li class="list-group-item">
-        <p>
-            car's price : 
-            <button (click)="convtnd(prix)">TND </button> 
-            <input type="text" [value]='tnd1'>
-                
-            <button (click)="conveur(prix)" >EUR </button> 
-            <input type="text" [value]='eur1' >
-                
-            <button (click)="convusd(prix)">USD </button> 
-            <input type="text" [value]='usd1'> 
-        </p>
-    </li>
-        </ul>
-    
-    
-    
+        <li class="list-group-item">
+            date of release : {{date |date}}
+        </li>
 
-<button  class="btn btn-primary" [routerLink]="['/articles']">Articles</button> 
+        <li class="list-group-item">
+            <p>
+                car's price : 
+                <button (click)="convtnd(prix)">TND </button> 
+                <input type="text" [value]='tnd1'>
+                
+                <button (click)="conveur(prix)" >EUR </button> 
+                <input type="text" [value]='eur1' >
+                
+                <button (click)="convusd(prix)">USD </button> 
+                <input type="text" [value]='usd1'> 
+            </p>
+        </li>
+    </ul>
+    <button  class="btn btn-primary" [routerLink]="['/articles']">Articles</button> 
 </body>
 
 

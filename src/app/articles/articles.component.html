@@ -1,8 +1,6 @@
 <app-menu></app-menu>
-<body  >
-    <h2  class="text-white" style="text-align: center;">our cars</h2>
-
-
+<body>
+    <h2 class="text-white" style="text-align: center;">our cars</h2>
     <ul class="list-group " style=" color:white;">
         <ng-container *ngFor="let c of lesArticles">
             <li class="list-group-item"  >
@@ -13,7 +11,5 @@
                 <button  class="btn btn-primary" [routerLink]="['/selectedArticle',c.id]">Details</button> 
             </li>
         </ng-container>
-        
     </ul>
 </body>    
-

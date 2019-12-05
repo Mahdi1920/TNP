@@ -5,14 +5,13 @@
     ID of car:<input type="text" cols placeholder="Id" id="id"  name="id" class="form-control" required pattern="[0-9]+" [(ngModel)]="id" #identif="ngModel"/>
     <div *ngIf="identif.invalid && identif.dirty" class="alert alert-danger">L'identifiant doit être un nombre </div> 
 
-    Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control" required  pattern="[A-Z][a-zA-Z]+" [(ngModel)]="libelle" #lib="ngModel"/>
-    <div *ngIf="lib.errors?.pattern && lib.dirty" class="alert alert-danger">le model doit commencer par une majuscle suivie d'au moins 1 caractère </div> 
+    Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control" required  pattern="[0-9a-zA-Z' ']+" [(ngModel)]="libelle" #lib="ngModel"/>
+    <div *ngIf="lib.errors?.pattern && lib.dirty" class="alert alert-danger">le model doit commencer par un caractère ou un entier suivie d'au moins 1 caractère </div> 
     <div [hidden]="!lib.errors?.required || lib.pristine"  class="alert alert-danger">Le libellé est un champ obligatoire</div> 
  
     Photo URL:<input type="text" name="image" id="image" placeholder="Src" class="form-control"   [(ngModel)]="image" #img="ngModel"/>
-    <!--<div *ngIf="img.errors?.pattern && img.dirty" class="alert alert-danger">  le source doit commencer par un ' suivie de plusieurs caractéres et terminer par un ' </div>-->
         
-    Horse power:<input type="text" cols placeholder="horse power"  id="hp" name="hp" class="form-control" required  [(ngModel)]="hp" #hpp="ngModel" />
+    Horse power:<input type="text" cols placeholder="horse power"  id="hp" name="hp" class="form-control" required  pattern="[0-9]+" [(ngModel)]="hp" #hpp="ngModel" />
     <div *ngIf="hpp.invalid && hpp.dirty" class="alert alert-danger">Le Horse power doit être un nombre  </div> 
 
     Price: <input type="text" name="prix" placeholder="Price" id="prix" class="form-control" required  pattern="[0-9]+" [(ngModel)]="prix" #priix="ngModel" />
@@ -33,4 +32,3 @@
     <input type="reset" value="annuler"  class="btn btn-danger"/>
         
 </form>
-    

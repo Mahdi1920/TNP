@@ -9,7 +9,7 @@ export class ArticlesService {
     new Article(10, 'Bugatti', '../assets/chiron.jpg', 2998000, "red", 493,true,new Date(2017,10,7),1600),
     new Article(11,'Lamborghini',  '../assets/aventador.jpg', 393695,"orange", 350,true,new Date(2015,10,7),750),
     new Article(12, 'Tesla', '../assets/tesla.jpg',151020, "gray", 250,true,new Date(2019,7,10),400), 
-    new Article(13, '206', '../assets/206.jpg',3000,"grey", 190, false,new Date(2003,10/7),35),     
+    new Article(13, '206', '../assets/206.jpg',3000,"gray", 190, false,new Date(2003,10/7),35),     
     new Article(14,'4l','../assets/4l.jpg', 2000,"white", 127,false,new Date(1969,10,7),20)
   ];
     car:Article;
@@ -80,67 +80,56 @@ export class ArticlesService {
       vitesse:number,etat:boolean, date:Date, hp:number,):boolean
       {
         let test:boolean=false;
-
         if (id==null)
         {
           alert("Id is required");
-          
         }
         else 
         if(this.testId(id)==false)
         {
           alert("Car is not found .. please verify your Id");
-          
         }
         else 
         {
           let obj=this.getArticleById(id);
-
           if(libelle!=null)
           {
-            
             obj.libellee(libelle);
             test=true;
           }
 
           if(image!=null)
           {
-            
             obj.imagee(image);
             test=true;
           }
 
           if(prix!=null)
           {
-            
             obj.prixx(prix);
             test=true;
           }
 
           if(couleur!=null)
-          {
-            
+          { 
             obj.couleurr(couleur);
             test=true;
           }
 
           if(vitesse!=null)
-          {
-            
+          { 
             obj.vitessee(vitesse);
             test=true;
           }
 
           if(etat!=null)
-          {
-            
+          { 
             obj.etatt(etat);
             test=true;
           }
 
           if(date!=null)
           {
-            
             obj.datee(date);
             test=true;
           }
@@ -165,36 +154,19 @@ export class ArticlesService {
       }
     }
     
-
-      recherche(id):Article
+    recherche(id):Article
      {
-          if(id!=null)
+        if(id!=null)
+        {
+          if(this.testId(id)==true)
           {
-            if(this.testId(id)==true)
-            {
-              let obj=this.getArticleById(id);
-              return obj;
-            }
-          
-            else if(this.testId(id)==false)
-            {
-              alert("car not found");
-            }
+            let obj=this.getArticleById(id);
+            return obj;
           }
+          else if(this.testId(id)==false)
+          {
+            alert("car not found");
+          }
+        }
       }
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-

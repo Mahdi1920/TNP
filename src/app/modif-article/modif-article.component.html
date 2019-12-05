@@ -4,7 +4,7 @@
         ID of car:<input type="text" cols placeholder="Id" id="id"  name="id" class="form-control" required pattern="[0-9]+" [(ngModel)]="id" #identif="ngModel"/>
         <div *ngIf="identif.invalid && identif.dirty" class="alert alert-danger">L'identifiant doit être un nombre </div> 
     
-        Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control" required  pattern="[A-Z][a-zA-Z]+" [(ngModel)]="libelle" #lib="ngModel"/>
+        Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control" required  pattern="[0-9a-zA-Z' ']+" [(ngModel)]="libelle" #lib="ngModel"/>
         <div *ngIf="lib.errors?.pattern && lib.dirty" class="alert alert-danger">le model doit commencer par une majuscle suivie d'au moins 1 caractère </div> 
         <div [hidden]="!lib.errors?.required || lib.pristine"  class="alert alert-danger">Le libellé est un champ obligatoire</div> 
      

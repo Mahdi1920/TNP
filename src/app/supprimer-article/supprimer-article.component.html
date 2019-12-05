@@ -2,25 +2,7 @@
 <h2 class="text-white" style="text-align: center;">Add Car:</h2>
 <form  class="form-group text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
     ID of car:<input type="number" cols placeholder="Id"  name="id" class="form-control" [(ngModel)]="id"/><br/>
-
-    <!--Model:<input type="text" name="lib" placeholder="Model" class="form-control"[(ngModel)]="lib"    />
-    
-    Photo URL:<input type="text" name="image" placeholder="Src" class="form-control" [(ngModel)]="image"/>
-    
-    Horse power:<input type="number" cols placeholder="horse power"  name="hp" class="form-control" [(ngModel)]="hp"/>
-    
-    Price: <input type="number" name="prix" placeholder="Price" class="form-control" [(ngModel)]="prix"/>
-    
-    Date of release:<input type="date" name="date" class="form-control" [(ngModel)]="date"/>
-    
-    Condition: <input type="text" name="etat" placeholder="Condition" class="form-control" [(ngModel)]="etat"/>
-    
-    Color: <input type="text" name="couleur" placeholder="Color" class="form-control" [(ngModel)]="couleur"/>
-    
-    Top speed: <input type="number" name="vitesse" placeholder="Top speed" class="form-control" [(ngModel)]="vitesse"/><br/>-->
-    
     <input type="submit"  value="Envoyer"class="btn btn-success" />	
-    
     <input type="reset" value="annuler"  class="btn btn-danger"/>
 </form>
 

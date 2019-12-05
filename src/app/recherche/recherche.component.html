@@ -1,26 +1,15 @@
 <app-menu></app-menu>
- 
-  
-    
 <form  class="form-group  text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
-        ID of car:<input type="text" cols placeholder="Id"   name="id" class="form-control"   [(ngModel)]="id" />
-        
-    
-                   
-            <br/><br/>
+        ID of car:<input type="text" cols placeholder="Id"   name="id" class="form-control"   [(ngModel)]="id" /><br/>
         <button class="btn btn-success"   >Envoyer</button>  	
-        
 </form>
-
-
-
         <ul *ngIf="x==true"> 
                 <li class="list-group-item"  >
                     <img [src]='a.image' width='500px' height='200px'/><br/>
                     article's ID : {{a.id}}<br/>
                     car's model : {{a.libelle}}<br/>
                     car's price (USD) : {{a.prix}} <br/>
-                    <button  class="btn btn-primary" [routerLink]="['/selectedArticle',a.id]"> Infos</button> 
+                    <button  class="btn btn-primary" [routerLink]="['/selectedArticle',a.id]"> Details</button> 
                 </li>
         </ul>
 

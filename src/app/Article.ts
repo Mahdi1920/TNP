@@ -32,43 +32,43 @@ export class Article
     
     public get prix(): number 
         { return this._prix; }
-    /*public set prix(pr:number)
-        { this._prix=pr; } */
+    public set prix(pr:number)
+        { this._prix=pr; } 
     public prixx(pr:number)
         { this._prix=pr; }
 
     public get couleur(): string 
         { return this._couleur; } 
-    /*public set couleur(coul:string)
-        {this.couleur=coul;}*/
+    public set couleur(coul:string)
+        {this.couleur=coul;}
     public couleurr(coul:string)
         { this._couleur =coul; }
 
     public get vitesse(): number 
         { return this._vitesse; } 
-    /*public set vitesse(vit:number)
-        { this._vitesse=vit; }*/
+    public set vitesse(vit:number)
+        { this._vitesse=vit; }
     public vitessee(vit:number)
         { this._vitesse=vit; }
     
     public get etat(): boolean
         { return this._etat; } 
-    /*public set etat( b:boolean)
-        { this._etat =b; }*/
+    public set etat( b:boolean)
+        { this._etat =b; }
     public etatt( b:boolean)
         { this._etat =b; }
 
     public get date():Date
         {return this._date ;}
-    /*public set date (dt :Date)
-        {this._date=dt ;}*/
+    public set date (dt :Date)
+        {this._date=dt ;}
     public datee (dt :Date)
         {this._date=dt ;}
     
     public get hp(): number 
         { return this._hp; }
-    /*public set hp(hp:number)
-        { this._hp=hp; }  */
+    public set hp(hp:number)
+        { this._hp=hp; }  
     public hpp(hp:number)
         { this._hp=hp; } 
     }

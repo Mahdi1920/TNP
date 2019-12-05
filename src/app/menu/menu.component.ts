@@ -7,19 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 date:Date=new Date();
-
-
-
   constructor() { }
-  
-  
   ngOnInit() {
-  
-/*
-  this.date.setMinutes((this.date.getMinutes())+1);
-  this.date.setSeconds((this.date.getSeconds())+1);
-  */
-
   }
 
 }
