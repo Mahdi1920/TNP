@@ -4,7 +4,6 @@ import { AuthentificationComponent } from './authentification/authentification.c
 import { ErreurauthComponent } from './erreurauth/erreurauth.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { ErreurmdpComponent } from './erreurmdp/erreurmdp.component';
-
 import { MenuComponent } from './menu/menu.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { RechercheComponent } from './recherche/recherche.component';
@@ -12,7 +11,6 @@ import { SelectedArticleComponent } from './selected-article/selected-article.co
 import { ModifArticleComponent } from './modif-article/modif-article.component';
 import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
 import { SupprimerArticleComponent } from './supprimer-article/supprimer-article.component';
-
 
 
 const routes: Routes = [

@@ -17,6 +17,8 @@ import { ModifArticleComponent } from './modif-article/modif-article.component';
 import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
 import { SupprimerArticleComponent } from './supprimer-article/supprimer-article.component';
 import { RechercheComponent } from './recherche/recherche.component';
+import { TitrePipe } from './titre.pipe';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { RechercheComponent } from './recherche/recherche.component';
     ModifArticleComponent,
     AjoutArticleComponent,
     SupprimerArticleComponent,
-    RechercheComponent
+    RechercheComponent,
+    TitrePipe
+    
   ],
   imports: [
     BrowserModule,

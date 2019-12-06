@@ -6,7 +6,7 @@
             <li class="list-group-item"  >
                 <img [src]='c.image' width='500px' height='300px'/><br/>
                 article's ID : {{c.id}}<br/>
-                car's model : {{c.libelle}}<br/>
+                car's model : {{c.libelle |titre}}<br/>
                 car's price (USD) : {{c.prix}} <br/>
                 <button  class="btn btn-primary" [routerLink]="['/selectedArticle',c.id]">Details</button> 
             </li>

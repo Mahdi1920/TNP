@@ -6,11 +6,11 @@ import { Article } from './Article';
 })
 export class ArticlesService {
   articles = [     
-    new Article(10, 'Bugatti', '../assets/chiron.jpg', 2998000, "red", 493,true,new Date(2017,10,7),1600),
-    new Article(11,'Lamborghini',  '../assets/aventador.jpg', 393695,"orange", 350,true,new Date(2015,10,7),750),
-    new Article(12, 'Tesla', '../assets/tesla.jpg',151020, "gray", 250,true,new Date(2019,7,10),400), 
-    new Article(13, '206', '../assets/206.jpg',3000,"gray", 190, false,new Date(2003,10/7),35),     
-    new Article(14,'4l','../assets/4l.jpg', 2000,"white", 127,false,new Date(1969,10,7),20)
+    new Article(12, 'Bugatti', '../assets/chiron.jpg', 2998000, "red", 493,true,new Date(2017,10,7),1600),
+    new Article(20,'Lamborghini',  '../assets/aventador.jpg', 393695,"orange", 350,true,new Date(2015,10,7),750),
+    new Article(14, 'Tesla', '../assets/tesla.jpg',151020, "gray", 250,true,new Date(2019,7,10),400), 
+    new Article(10, '206', '../assets/206.jpg',3000,"gray", 190, false,new Date(2003,10/7),35),     
+    new Article(11,'4l','../assets/4l.jpg', 2000,"white", 127,false,new Date(1969,10,7),20)
   ];
     car:Article;
     articlesR:Article[];
@@ -169,4 +169,5 @@ export class ArticlesService {
           }
         }
       }
+      
 }
