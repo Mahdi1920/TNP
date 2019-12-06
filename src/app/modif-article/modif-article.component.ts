@@ -18,16 +18,22 @@ etat:boolean;
 vitesse:number;
 couleur:string;
 hp:number;
+convetat:string;
 
   constructor(private articlesService:ArticlesService) { }
   onSubmit(f:NgForm)
   {
+
+    if(this.convetat=="true")
+    {
+      this.etat=true;
+    }
+    else
+      this.etat=false;
+
     this.articlesService.modifCar(this.id, this.libelle, this.image,  this.prix,this.couleur,this.vitesse,
        this.etat, this.date, this.hp);  
-      // console.log("-- "+f.value['id']+" "+ f.value['lib']);    
-      /*this.articlesService.modifCar(f.value['id'], f.value['lib'], f.value['image'],  f.value['prix'],f.value['couleur'],f.value['vitesse'],
-        f.value['etat'], f.value['date'], f.value['hp']);  */
-  }
+    }
  
 
   ngOnInit() {

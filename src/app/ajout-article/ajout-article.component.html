@@ -3,32 +3,32 @@
 
 <form  class="form-group  text-white" #f="ngForm" (ngSubmit)="onSubmit(f)" >         
     ID of car:<input type="text" cols placeholder="Id" id="id"  name="id" class="form-control" required pattern="[0-9]+" [(ngModel)]="id" #identif="ngModel"/>
-    <div *ngIf="identif.invalid && identif.dirty" class="alert alert-danger">L'identifiant doit être un nombre </div> 
+    <div *ngIf="identif.invalid && identif.dirty" class="alert alert-danger">ID must be a number </div> 
 
     Model:<input type="text" name="lib" placeholder="Model" id="libelle" class="form-control" required  pattern="[0-9a-zA-Z' ']+" [(ngModel)]="libelle" #lib="ngModel"/>
-    <div *ngIf="lib.errors?.pattern && lib.dirty" class="alert alert-danger">le model doit commencer par un caractère ou un entier suivie d'au moins 1 caractère </div> 
-    <div [hidden]="!lib.errors?.required || lib.pristine"  class="alert alert-danger">Le libellé est un champ obligatoire</div> 
+    <div *ngIf="lib.errors?.pattern && lib.dirty" class="alert alert-danger">Model must start with a number or a letter </div> 
+    <div [hidden]="!lib.errors?.required || lib.pristine"  class="alert alert-danger">model is required</div> 
  
     Photo URL:<input type="text" name="image" id="image" placeholder="Src" class="form-control"   [(ngModel)]="image" #img="ngModel"/>
         
     Horse power:<input type="text" cols placeholder="horse power"  id="hp" name="hp" class="form-control" required  pattern="[0-9]+" [(ngModel)]="hp" #hpp="ngModel" />
-    <div *ngIf="hpp.invalid && hpp.dirty" class="alert alert-danger">Le Horse power doit être un nombre  </div> 
+    <div *ngIf="hpp.invalid && hpp.dirty" class="alert alert-danger">horse power must be a number  </div> 
 
     Price: <input type="text" name="prix" placeholder="Price" id="prix" class="form-control" required  pattern="[0-9]+" [(ngModel)]="prix" #priix="ngModel" />
-    <div *ngIf="priix.invalid && priix.dirty" class="alert alert-danger">Le prix doit être un nombre    </div> 
+    <div *ngIf="priix.invalid && priix.dirty" class="alert alert-danger">price must be a number   </div> 
         
     Date of release:<input type="date" name="date" id="date" class="form-control" required  [(ngModel)]="date" #dt="ngModel" />
         
-    Condition: <input type="text" name="etat" id="etat" placeholder="Condition" class="form-control" required pattern="true|false" [(ngModel)]="etat" #eta="ngModel" />
-    <div *ngIf="eta.errors?.pattern && eta.dirty" class="alert alert-danger"> la condition doit etre true or false</div>
+    Condition: <input type="text" name="etat" id="etat" placeholder="Condition" class="form-control" required pattern="true|false" [(ngModel)]="convetat" #eta="ngModel" />
+    <div *ngIf="eta.errors?.pattern && eta.dirty" class="alert alert-danger"> condition must be true or false</div>
         
     Color: <input type="text" name="couleur" etat="couleur" placeholder="Color" class="form-control" required  pattern="[a-z]+" [(ngModel)]="couleur" #coul="ngModel" />
-    <div *ngIf="coul.errors?.pattern && coul.dirty" class="alert alert-danger"> le couleur doit composer par des caractéres </div>
+    <div *ngIf="coul.errors?.pattern && coul.dirty" class="alert alert-danger"> color connot contain numbers </div>
         
     Top speed: <input type="text" name="vitesse" id="vitesse" placeholder="Top speed" class="form-control" required pattern="[0-9]+" [(ngModel)]="vitesse" #vit="ngModel" /><br/>
-    <div *ngIf="vit.invalid && vit.dirty" class="alert alert-danger">La vitesse doit être un nombre    </div> 
+    <div *ngIf="vit.invalid && vit.dirty" class="alert alert-danger">speed must be a number</div> 
         
-    <button class="btn btn-success" [disabled]="f.invalid"  >Envoyer</button>  	
-    <input type="reset" value="annuler"  class="btn btn-danger"/>
+    <button class="btn btn-success" [disabled]="f.invalid"  >Add</button>  	
+    <input type="reset" value="Reset"  class="btn btn-danger"/>
         
 </form>

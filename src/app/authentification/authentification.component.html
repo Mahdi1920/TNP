@@ -1,11 +1,13 @@
 <body>
-  <div class="container" >
-    <div class="row">
+  <div class="container "  >
+    <div class="row" >
       <div class="col-sm-19 col-md-17 col-lg-15 mx-auto">
         <div class="card card-signin my-5">
-          <div class="card-body">
+          <div class="card-body ">
             <h1 class="card-title text-center">Sign In</h1>
             <input type="text" id="inputUser" class="form-control" placeholder="Username" required autofocus  #userName />
+
+            <br>
 
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #password (keyup)="verif(userName.value,password.value)" /><br/>
 
@@ -16,6 +18,7 @@
             <button *ngIf="erreur=='password'" class="btn btn-success">
               <a  [routerLink]="['/erreurmdp']" class="text-white">connect</a>
             </button>
+            
 
             <button *ngIf="erreur=='correct'" class="btn btn-success">
               <a   [routerLink]="['/articles']" class="text-white" >connect</a>

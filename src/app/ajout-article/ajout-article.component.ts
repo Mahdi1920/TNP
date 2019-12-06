@@ -19,10 +19,18 @@ vitesse:number;
 couleur:string;
 hp:number;
 c:Article;
+convetat:string;
   
   constructor(private activatedRouter:ActivatedRoute,private articlesService:ArticlesService,private router:Router) { }
   onSubmit(f:NgForm)
   {
+    if(this.convetat=="true")
+    {
+      this.etat=true;
+    }
+    else
+      this.etat=false;
+
     this.articlesService.addCar(this.id, this.libelle, this.image,  this.prix,this.couleur,this.vitesse,
        this.etat, this.date, this.hp);   
      //console.log("-- "+f.value['etat'])  
